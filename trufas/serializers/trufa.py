@@ -1,16 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from trufas.models import Combo, Sabor, Trufa
-
-class ComboSerializer(ModelSerializer):
-    class Meta:
-        model = Combo
-        fields = "__all__"
-
-class SaborSerializer(ModelSerializer):
-    class Meta:
-        model = Sabor
-        fields = "__all__"
+from trufas.models import  Trufa
 
 class TrufaSerializer(ModelSerializer):
     class Meta:

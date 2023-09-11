@@ -1,26 +1,9 @@
 from django.db import models
 
-class Combo (models.Model):
-    descricao = models.CharField(max_length=100)
+from trufas.models import Sem_Lactose, Combo, Sabor
 
-    def __str__(self):
-        return self.descricao
-    
+from django.db import models
 
-class Sabor (models.Model):
-    nome = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.nome
-
-
-class Sem_Lactose (models.Model):
-    nome = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.nome
-    
-   
 class Trufa(models.Model):
     titulo = models.CharField(max_length=255)
     quantidade = models.IntegerField(default=0,  null=True, blank=True)
@@ -32,5 +15,3 @@ class Trufa(models.Model):
 
     def __str__(self):
         return f"{self.titulo} ({self.quantidade})"
-
-
