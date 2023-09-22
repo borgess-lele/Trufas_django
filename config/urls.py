@@ -3,7 +3,7 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from trufas.views import ComboViewSet, SaborViewSet
+from trufas.views import ComboViewSet, SaborViewSet, Sem_LactoseViewSet
 from usuario.router import router as usuario_router
 from django.conf import settings
 from django.conf.urls.static import static
@@ -18,6 +18,7 @@ from drf_spectacular.views import (
 router = DefaultRouter()
 router.register(r"combo", ComboViewSet)
 router.register(r"sabor", SaborViewSet)
+router.register(r"sem_lactose", Sem_LactoseViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
